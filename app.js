@@ -10,24 +10,19 @@ const quiz = [
     correct: "ニンテンドーDS",
   },
   {
-    question: "ゲーム市場、最も売れたゲーム機は次の内どれ？",
-    answers: [
-      "スーパーファミコン",
-      "PlayStation2",
-      "NintendoSwitch",
-      "ニンテンドーDS",
-    ],
-    correct: "ニンテンドーDS",
+    question: "HTMLのバージョンで、存在しないのは次の内どれ？",
+    answers: ["HTML1.0", "HTML2.0", "HTML3.0", "HTML4.0"],
+    correct: "HTML3.0",
   },
   {
-    question: "ゲーム市場、最も売れたゲーム機は次の内どれ？",
+    question: "CSSのバージョンで、存在しないのは次の内どれ？",
     answers: [
-      "スーパーファミコン",
-      "PlayStation2",
-      "NintendoSwitch",
-      "ニンテンドーDS",
+      "CSS3",
+      "Cascading Style Sheets Level 2 Revision 2",
+      "CSS5",
+      "CSS6",
     ],
-    correct: "ニンテンドーDS",
+    correct: "CSS6",
   },
 ];
 
@@ -75,3 +70,16 @@ while (handlerIndex < buttonLength) {
   });
   handlerIndex++;
 }
+
+// ダークモードの実装
+const btn = document.querySelector("#btn-mode");
+
+btn.addEventListener("change", () => {
+  if (btn.checked == true) {
+    document.body.classList.add("dark-mode");
+    document.body.classList.remove("light-mode");
+  } else {
+    document.body.classList.add("light-mode");
+    document.body.classList.remove("dark-mode");
+  }
+});
